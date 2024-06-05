@@ -238,6 +238,7 @@ input , label{
         .underline-1{ /* 下底線 */
             position: relative;
             z-index: 0;
+            display: inline-block;
             &::after{
                 content: '';
                 position: absolute;
@@ -253,6 +254,7 @@ input , label{
         .underline-2{ /* 下底線 */
             position: relative;
             z-index: 0;
+            display: inline-block;
             &::after{ 
                 content: '';
                 position: absolute;
