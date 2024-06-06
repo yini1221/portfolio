@@ -263,7 +263,7 @@ input , label{
     }
 }
  /* banner RWD */
- @media screen and (max-width:375px){
+ @media screen and (max-width:460px){
     .banner{
         gap: 16px;
     }
@@ -282,5 +282,35 @@ input , label{
     }
  }
  
-
 /* content */
+.content-inner{
+    display: flex;
+}
+.article-list{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    article{
+        display: flex;
+        gap: 16px;
+    }
+}
+.article-content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    fooder{
+        display: flex;
+        gap: 16px;
+        align-items: center;
+    }
+    span{
+        color: #5B5B5B;
+    }
+    .tag{
+        color: #3B3B3B;
+        background: #F1F1F1;
+        padding: 4px 12px;
+        border-radius: 16px;
+    }
+}
