@@ -202,3 +202,61 @@ input , label{
 }
 
 /* banner */
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0 80px;
+    gap: 24px;
+    h2{
+        color: #3B3B3B;
+        font-size: 32px;
+        line-height: 1.2;
+        font-weight: 600;
+    }
+    p{
+        color: #919191;
+    }
+}
+/* banner 標題裝飾 */
+.banner h2{
+    position: relative;
+    &::before{ /* 背景線條 */
+        content: '';
+        position: absolute;
+        width: 336px;
+        height: 1px;
+        background-color: #C1C1C1;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;       
+        z-index: 0;
+    }
+}
+.title-line{
+    background: #ffffff;
+    z-index: 1;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: #C1C1C1;
+        border-radius: 50%;
+        top: 50%;
+        left: -125px;
+        transform: translateY(-50%);
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: #C1C1C1;
+        border-radius: 50%;
+        top: 50%;
+        right: -125px;
+        transform: translateY(-50%);
+    }
+}

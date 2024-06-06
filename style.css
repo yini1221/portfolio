@@ -301,7 +301,7 @@ input , label{
     }
 }
 
-/* Banner RWD */
+/* banner RWD */
 @media screen and (max-width:767px){
     .banner{
         .banner-top{
@@ -336,7 +336,7 @@ input , label{
     }  
 }
 
-/* Work */
+/* work */
 .work-inner{
     .card-group{
         display: flex;
@@ -394,7 +394,7 @@ input , label{
     }
 }
 
-/* Work RWD */
+/* work RWD */
 @media screen and (max-width:767px){
     .work-inner .card-group{
         flex-direction: column;
@@ -427,7 +427,7 @@ input , label{
     } 
 }
 
-/* Footer  */
+/* footer  */
 .fooder{
     background-image: url(img/footer-bg-lg.png);
 }
@@ -487,7 +487,7 @@ input , label{
     }
 }
 
-/* Footer RWD */
+/* footer RWD */
 @media screen and (max-width:767px){
     .fooder{
         background-image: url(img/footer-bg-sm.png);
