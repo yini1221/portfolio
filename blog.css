@@ -239,7 +239,7 @@ input , label{
     background: #ffffff;
     z-index: 1;
     padding: 0 16px;
-    &::before{
+    &::before{ /* 左側圓點 */
         content: '';
         position: absolute;
         width: 6px;
@@ -250,7 +250,7 @@ input , label{
         left: -110px;
         transform: translateY(-50%);
     }
-    &::after{
+    &::after{ /* 右側圓點 */
         content: '';
         position: absolute;
         width: 6px;
@@ -262,3 +262,25 @@ input , label{
         transform: translateY(-50%);
     }
 }
+ /* banner RWD */
+ @media screen and (max-width:375px){
+    .banner{
+        gap: 16px;
+    }
+    .banner h2{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .banner h2::before{
+    width: 222px;
+    }
+    .title-line::before{
+        left: -60px;
+    }
+    .title-line::after{
+        right: -60px;
+    }
+ }
+ 
+
+/* content */
