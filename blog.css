@@ -79,7 +79,7 @@ a{
     position: sticky;
     top: 0;
     background: #ffffff;
-    z-index: 1;
+    z-index: 1000;
 }
 .header-inner{
     display: flex;
