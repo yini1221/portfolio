@@ -468,11 +468,17 @@ input , label{
         background: #000000;
         color: #FFFFFF;
         font-weight: 700;
+        &:hover{
+            background: #a9a7a7;
+        }
     }
     .white-bg a{
         background: #FFFFFF;
         border: 1px solid #C1C1C1;
         color: #3B3B3B;
+        &:hover{
+            background: #bbbaba;
+            color: #FFFFFF;
     }
 }
 
