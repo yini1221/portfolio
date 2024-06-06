@@ -313,4 +313,31 @@ input , label{
         padding: 4px 12px;
         border-radius: 16px;
     }
+    header{
+        h2{
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        p{
+            margin: 16px 0 36px;
+            color: #3B3B3B;
+        }
+    }
+}
+.article-menu{
+    display: flex;
+    flex-direction: column;
+    width: calc(72% - 12px);
+    background: #FAFAFA;
+    padding-top: 80px;
+    padding-left: 80px;
+    gap: 32px;
+    li a{
+        font-size: 20px;
+        color: #5B5B5B;
+        &:hover{
+            color: #1E1E1E;
+        }
+    }
 }
