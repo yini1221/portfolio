@@ -306,7 +306,8 @@ input , label{
             &::before{
                 width: 64px;
                 height: 64px;
-                left: 41%;
+                left: 50%; 
+                transform: translateX(-50%)
             }
             &::after{
                 display: none;
