@@ -221,6 +221,7 @@ input , label{
 }
 /* banner 標題裝飾 */
 .banner h2{
+    display: flex;
     position: relative;
     &::before{ /* 背景線條 */
         content: '';
@@ -237,6 +238,7 @@ input , label{
 .title-line{
     background: #ffffff;
     z-index: 1;
+    padding: 0 16px;
     &::before{
         content: '';
         position: absolute;
@@ -245,7 +247,7 @@ input , label{
         background-color: #C1C1C1;
         border-radius: 50%;
         top: 50%;
-        left: -125px;
+        left: -110px;
         transform: translateY(-50%);
     }
     &::after{
@@ -256,7 +258,7 @@ input , label{
         background-color: #C1C1C1;
         border-radius: 50%;
         top: 50%;
-        right: -125px;
+        right: -110px;
         transform: translateY(-50%);
     }
 }
