@@ -477,7 +477,7 @@ input , label{
         border: 1px solid #C1C1C1;
         color: #3B3B3B;
         &:hover{
-            background: #bbbaba;
+            background: #a9a7a7;
             color: #FFFFFF;
         }
     }
