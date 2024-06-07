@@ -405,6 +405,7 @@ input , label{
     .article-list{
         width: 100%;
         padding: 0 22.5px;
+        gap: 40px;
     }
     .article-list article{
         flex-direction: column;
@@ -420,6 +421,104 @@ input , label{
         }
         .article-content{
             width: 100%;
+            fooder{
+                justify-content: space-between;
+            }
+            header p{
+                margin: 12px 0 0 0;
+            }
         }
+    }
+}
+/* footer  */
+.fooder{
+    background-image: url(img/footer-bg-lg.png);
+}
+.footer-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 12px;
+    .fooder-logo{
+        margin-bottom: 24px;
+    }
+}
+.fooder-about{
+    font-size: 20px;
+    .content-p{
+    margin-bottom: 24px;
+    color: #3B3B3B;
+    }
+    a{
+        color: #919191;
+        line-height: 1.2;
+    }
+} 
+.fooder-link{
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    li{
+        width: 306px;
+    }
+    a{
+        display: flex;
+        padding: 8px 24px;
+        border-radius: 8px;
+        align-items: center;
+        gap: 8px;
+        font-size: 20px;
+    }
+    .black-bg a{
+        background: #000000;
+        color: #FFFFFF;
+        font-weight: 700;
+        &:hover{
+            background: #a9a7a7;
+        }
+    }
+    .white-bg a{
+        background: #FFFFFF;
+        border: 1px solid #C1C1C1;
+        color: #3B3B3B;
+        &:hover{
+            background: #a9a7a7;
+            color: #FFFFFF;
+        }
+    }
+}
+
+/* footer RWD */
+@media screen and (max-width:767px){
+    .fooder{
+        background-image: url(img/footer-bg-sm.png);
+    }
+    .footer-inner{
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    .fooder-about{
+        text-align: center;
+        a{
+            display: flex;
+            justify-content: center;
+            height: 54px;
+        }
+        .content-p{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            font-size: 16px;
+        }
+    }
+    .fooder-link a{
+        padding: 4px 24px;
+    }
+}
+@media screen and (max-width:375px){
+    .fooder{
+        background-image: url(img/footer-bg-sm.png);
     }
 }
