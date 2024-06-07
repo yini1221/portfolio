@@ -263,9 +263,16 @@ input , label{
     }
 }
  /* banner RWD */
+ @media screen and (max-width:767px){
+    .banner{
+        padding: 80px 0 60px;
+    }
+    
+ }
  @media screen and (max-width:460px){
     .banner{
         gap: 16px;
+        padding: 40px 0;
     }
     .banner h2{
         font-size: 24px;
@@ -378,6 +385,7 @@ input , label{
 @media screen and (max-width:767px){
     .content-inner{
         flex-direction: column-reverse;
+        gap: 40px;
     }
     .article-menu{
         width: 100%;
@@ -385,12 +393,33 @@ input , label{
     .menu-list{
         flex-direction: row;
         width: 100%;
-        overflow-x: scroll;
         padding: 20px 16px;
+        overflow-x: scroll;
         &::-webkit-scrollbar{
             display: none;     
         }
-       
-        
+       li a{
+        font-size: 16px;
+       }
+    }
+    .article-list{
+        width: 100%;
+        padding: 0 22.5px;
+    }
+    .article-list article{
+        flex-direction: column;
+        align-items: center;
+        .article-img{
+            display: flex;
+            justify-content: center;
+            height: auto;
+            max-width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .article-content{
+            width: 100%;
+        }
     }
 }
