@@ -461,9 +461,6 @@ input , label{
         flex-direction: column;
         gap: 24px;
     }
-    li{
-        width: 306px;
-    }
     a{
         display: flex;
         padding: 8px 24px;
