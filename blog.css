@@ -285,20 +285,34 @@ input , label{
 /* content */
 .content-inner{
     display: flex;
+    margin-bottom: 120px;
+    gap: 24px;
 }
 .article-list{
     display: flex;
     flex-direction: column;
     gap: 64px;
+    width: 74%;
     article{
         display: flex;
         gap: 16px;
+
+    }
+}
+.article-img{
+    max-width: 306px;
+    height: 220px;
+    width: 100%;
+    img{
+        border-radius: 8px;
+        height: 100%;
     }
 }
 .article-content{
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 68%;
     fooder{
         display: flex;
         gap: 16px;
@@ -326,18 +340,42 @@ input , label{
     }
 }
 .article-menu{
+    background: #FAFAFA;
+    width: 24%;
+    display: flex;
+    justify-content: center;
+}
+.menu-list{
     display: flex;
     flex-direction: column;
     width: calc(72% - 12px);
-    background: #FAFAFA;
     padding-top: 80px;
     padding-left: 80px;
     gap: 32px;
+    li{
+    }
     li a{
         font-size: 20px;
         color: #5B5B5B;
+        position: relative;
+        padding: 4px 0;
+        white-space: nowrap;
         &:hover{
             color: #1E1E1E;
+            &::before{
+                position: absolute;
+                content: '';
+                background-color: #1E1E1E;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+            }
         }
     }
+}
+
+/* content RWD */
+@media screen and (max-width:767px){
+
 }
