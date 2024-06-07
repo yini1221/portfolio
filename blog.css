@@ -350,7 +350,6 @@ input , label{
     flex-direction: column;
     width: calc(72% - 12px);
     padding-top: 80px;
-    padding-left: 80px;
     gap: 32px;
     li{
     }
@@ -377,5 +376,21 @@ input , label{
 
 /* content RWD */
 @media screen and (max-width:767px){
-
+    .content-inner{
+        flex-direction: column-reverse;
+    }
+    .article-menu{
+        width: 100%;
+    }
+    .menu-list{
+        flex-direction: row;
+        width: 100%;
+        overflow-x: scroll;
+        padding: 20px 16px;
+        &::-webkit-scrollbar{
+            display: none;     
+        }
+       
+        
+    }
 }
