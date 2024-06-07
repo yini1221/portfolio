@@ -389,6 +389,7 @@ input , label{
     .content-inner{
         flex-direction: column-reverse;
         gap: 40px;
+        margin-bottom: 80px;
     }
     .article-menu{
         width: 100%;
