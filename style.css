@@ -351,6 +351,7 @@ input , label{
             margin-top: 80px;
             img{
                 border-radius: 16px;
+                border: 1px solid #F1F1F1;
             }
             .content{
                 padding: 16px 0 0 16px;
