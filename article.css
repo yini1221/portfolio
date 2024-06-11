@@ -209,6 +209,7 @@ input , label{
     display: flex;
     margin-bottom: 80px;
     gap: 134px;
+    color: #3B3B3B;
 }
 .article-content{
     display: flex;
@@ -224,7 +225,6 @@ input , label{
 }
 .article-header{
     text-align: center;
-    color: #3B3B3B;
     h2 h3{
         line-height: 1.2;
     }
@@ -261,10 +261,6 @@ input , label{
         }
     }
 }
-
-
-
-
 .article-menu{
     background: #FAFAFA;
     width: 24%;
@@ -297,6 +293,52 @@ input , label{
                 bottom: 0;
                 left: 0;
             }
+        }
+    }
+}
+
+/* article-more */
+.article-more{
+    border-top: 1px solid #C1C1C1;
+    padding-top: 80px;
+    h3{
+        font-weight: 700;
+        line-height: 1.2;
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    h4{
+        line-height: 1.2;
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+}
+.article-card{
+    display: flex;
+    gap: 24px;
+    max-width: 856px;
+    li{
+        max-width: 416px;
+    }
+    img{
+        border: 1px solid #F1F1F1;
+        border-radius: 8px;
+        margin-bottom: 16px;
+    }
+}
+.card-content{
+    padding: 0 8px;
+    .tag{
+        display: flex;
+        justify-content: space-between;
+        p{
+            background: #F1F1F1;
+            border-radius: 16px;
+            padding: 4px 12px;
+        }
+        span{
+            color: #5B5B5B;
         }
     }
 }
