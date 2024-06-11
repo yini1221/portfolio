@@ -1,0 +1,302 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 全域設定 */
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: "Noto Sans TC", sans-serif;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1296px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+/* 表頭 */
+.header{
+    border-bottom: 1px solid #F1F1F1;
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    z-index: 1000;
+}
+.header-inner{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 0 auto;
+}
+.header-logo{
+    position: absolute;
+    left: 0;
+    top: 28px;
+}
+.header-meun{
+    display: flex;
+    gap: 40px;
+    padding: 32px 0;
+    .main-page{
+        font-weight: 600;
+    }
+    a{
+        color: #000000;
+        &:hover{
+            font-weight: 600;
+        }
+    }
+}
+input , label{
+    display: none;
+}
+/* 框線製作 */
+.header-meun li{
+    position: relative;
+    padding: 4px 8px;
+    &::before,&::after{
+        display: block;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        z-index: 0;
+    }
+}
+.header-meun li:hover{
+    &::before{
+        content: '';
+        border-top: 1px solid #919191;
+        border-left: 1px solid #919191;
+        top: 0;
+        left: 0;
+    }
+    &::after{
+        content: '';
+        border-top: 1px solid #919191;
+        border-right: 1px solid #919191;
+        top: 0;
+        right: 0;
+    }
+}
+/* 一個元素只能設定一個before、after，故用span標籤再新增下方框線 */
+.header-meun span{
+    position: relative;
+    &::before,&::after{
+        display: block;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        z-index: 0;
+    }
+}
+.header-meun span:hover{
+    &::before{
+        content: '';
+        border-bottom: 1px solid #919191;
+        border-left: 1px solid #919191;
+        bottom: 0;
+        left: 0;
+    }
+    &::after{
+        content: '';
+        border-bottom: 1px solid #919191;
+        border-right: 1px solid #919191;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+/* RWD */
+@media screen and (max-width:767px){
+    .header-inner{
+        justify-content: space-between;
+        padding: 8px 12px;
+    }
+    .header-logo{position: static;
+    }
+    .header-meun{
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 50%; 
+        transform: translateX(-50%); 
+        display: none;
+        background: #fff;
+        z-index: 1;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+          }
+    }
+    
+    /* 漢堡選單 */
+    label{
+        display: block;}
+    input:checked ~ .header-meun{
+        max-height: 240px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 24px;
+        padding: 10px;
+    }
+    #switch{
+        display: none;
+    }
+}
+
+/* content */ 
+.content-inner{
+    display: flex;
+    margin-bottom: 80px;
+    gap: 134px;
+}
+.article-content{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    p{
+        font-size: 20px;
+        text-align: start;
+    }
+}
+.content-tag{
+    color: #919191;
+}
+.article-header{
+    text-align: center;
+    color: #3B3B3B;
+    h2 h3{
+        line-height: 1.2;
+    }
+    h2{
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+    h3{
+        font-size: 24px;
+        margin-bottom: 64px;
+    }
+}
+.article-content{
+    max-width: 856px;
+    h4{
+        line-height: 1.2;
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+}
+.article-content .card{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    li{
+        width: calc(50% - 12px);
+        p{
+            color: #5B5B5B;
+            font-size: 16px;
+            text-align: center;
+            margin-top: 8px;
+        }
+    }
+}
+
+
+
+
+.article-menu{
+    background: #FAFAFA;
+    width: 24%;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+}
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    width: calc(72% - 12px);
+    padding-top: 80px;
+    gap: 32px;
+    li{
+    }
+    li a{
+        font-size: 20px;
+        color: #5B5B5B;
+        position: relative;
+        padding: 4px 0;
+        white-space: nowrap;
+        &:hover{
+            color: #1E1E1E;
+            &::before{
+                position: absolute;
+                content: '';
+                background-color: #1E1E1E;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+}
