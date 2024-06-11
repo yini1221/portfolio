@@ -354,6 +354,7 @@ input , label{
     width: 24%;
     display: flex;
     justify-content: center;
+    border-radius: 8px;
 }
 .menu-list{
     display: flex;
