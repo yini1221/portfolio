@@ -222,7 +222,11 @@ input , label{
     }
 }
 .content-tag{
+    display: flex;
     color: #919191;
+    p{
+        font-size: 16px;
+    }
 }
 .article-header{
     text-align: center;
@@ -295,6 +299,30 @@ input , label{
                 left: 0;
             }
         }
+    }
+}
+
+/* content RWD */
+@media screen and (max-width:767px){
+    .content-inner{
+        flex-direction: column-reverse;
+        gap: 32px;
+        margin: 0 auto 40px;
+    }
+    .article-menu{
+        width: 100%;
+    }
+    .menu-list{
+        flex-direction: row;
+        width: 100%;
+        padding: 20px 16px;
+        overflow-x: scroll;
+        &::-webkit-scrollbar{
+            display: none;     
+        }
+       li a{
+        font-size: 16px;
+       }
     }
 }
 
