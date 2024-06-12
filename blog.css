@@ -306,7 +306,7 @@ input , label{
     article{
         display: flex;
         gap: 16px;
-
+        color: #3B3B3B;
     }
 }
 .article-img{
