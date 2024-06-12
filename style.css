@@ -495,7 +495,7 @@ input , label{
     }
     .footer-inner{
         flex-direction: column;
-        padding: 40px 0;
+        padding: 40px 12px;
     }
     .fooder-about{
         text-align: center;
