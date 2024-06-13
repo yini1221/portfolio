@@ -77,7 +77,50 @@ h2{
     line-height: 1.2;
     font-weight: 600;
     color: #3B3B3B;
+    text-align: center;
+    position: relative;
+    width: 372px;
 }
+/* h2標題裝飾 */
+h2::before{
+    content: '';
+    position: absolute;
+    width: 372px;
+    height: 1px;
+    background-color: #C1C1C1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+.title-line{
+    background: #ffffff;
+    z-index: 1;
+    padding: 0 16px;
+}
+.title-line::before{ /* 圓點 */
+    content: '';
+    position: absolute;
+    background-color: #C1C1C1;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.title-line::after{ /* 圓點 */
+    content: '';
+    position: absolute;
+    background-color: #C1C1C1;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 h3{
     font-size: 28px;
     font-weight: 700;
@@ -95,6 +138,7 @@ p{
     line-height: 1.5;
     color: #E9E9E9;
 }
+
 /* 表頭 */
 .header{
     border-bottom: 1px solid #F1F1F1;
@@ -228,8 +272,11 @@ input , label{
 
 /* 服務項目 */
 .service{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0;
+    text-align: center;
     h2{
         margin: 120px 0 80px;
     }
@@ -269,5 +316,106 @@ input , label{
         li{
             max-width: 100%;
         }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer  */
+.fooder{
+    background-image: url(img/footer-bg-lg.png);
+}
+.footer-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 12px;
+    .fooder-logo{
+        margin-bottom: 24px;
+    }
+}
+.fooder-about{
+    font-size: 20px;
+    .content-p{
+    margin-bottom: 24px;
+    color: #3B3B3B;
+    }
+    a{
+        color: #919191;
+        line-height: 1.2;
+    }
+} 
+.fooder-link{
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    a{
+        display: flex;
+        padding: 8px 24px;
+        border-radius: 8px;
+        align-items: center;
+        gap: 8px;
+        font-size: 20px;
+    }
+    .black-bg a{
+        background: #000000;
+        color: #FFFFFF;
+        font-weight: 700;
+        &:hover{
+            background: #a9a7a7;
+        }
+    }
+    .white-bg a{
+        background: #FFFFFF;
+        border: 1px solid #C1C1C1;
+        color: #3B3B3B;
+        &:hover{
+            background: #a9a7a7;
+            color: #FFFFFF;
+        }
+    }
+}
+
+/* footer RWD */
+@media screen and (max-width:767px){
+    .fooder{
+        background-image: url(img/footer-bg-sm.png);
+    }
+    .footer-inner{
+        flex-direction: column;
+        padding: 40px 12px;
+    }
+    .fooder-about{
+        text-align: center;
+        a{
+            display: flex;
+            justify-content: center;
+            height: 54px;
+        }
+        .content-p{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            font-size: 16px;
+        }
+    }
+    .fooder-link a{
+        padding: 4px 24px;
+    }
+}
+@media screen and (max-width:375px){
+    .fooder{
+        background-image: url(img/footer-bg-sm.png);
     }
 }
