@@ -77,7 +77,6 @@ h2{
     line-height: 1.2;
     font-weight: 600;
     color: #3B3B3B;
-    text-align: center;
     position: relative;
     width: 372px;
 }
@@ -91,12 +90,7 @@ h2::before{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0;
-}
-.title-line{
-    background: #ffffff;
-    z-index: 1;
-    padding: 0 16px;
+    z-index: -1;
 }
 .title-line::before{ /* 圓點 */
     content: '';
@@ -119,6 +113,19 @@ h2::before{
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+}
+.title-line{
+    background: #ffffff;
+    padding: 0 16px;
+}
+/* 線條 RWD */
+@media screen and (max-width:661px){
+    h2{
+        width: 249px;
+    }
+    h2::before{
+        width: 249px;
+    }
 }
 
 h3{
@@ -292,12 +299,12 @@ input , label{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 16px;
         background-image: url(img/service-item-bg.png);
         border-radius: 16px;
         width: 306px;
         height: 306px;
-        padding: 80px 113px;
         h3{
             width: 112px;
         }
@@ -314,7 +321,8 @@ input , label{
     .service-items{
         margin-bottom: 80px;
         li{
-            max-width: 100%;
+            max-width: 306px;
+            width: 100%;
         }
     }
 }
