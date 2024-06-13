@@ -228,18 +228,19 @@ input , label{
 
 /* 服務項目 */
 .service{
-    margin: 120px auto;
     text-align: center;
     padding: 0;
     h2{
-        margin-bottom: 80px;
+        margin: 120px 0 80px;
     }
 }
 .service-items{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     position: relative;
     gap: 24px;
+    margin-bottom: 120px;
     li{
         display: flex;
         flex-direction: column;
@@ -252,6 +253,21 @@ input , label{
         padding: 80px 113px;
         h3{
             width: 112px;
+        }
+    }
+}
+
+/* 服務項目 RWD */
+@media screen and (max-width:767px){
+    .service{
+        h2{
+            margin: 40px 0;
+        }
+    } 
+    .service-items{
+        margin-bottom: 80px;
+        li{
+            max-width: 100%;
         }
     }
 }
