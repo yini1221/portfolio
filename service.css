@@ -448,7 +448,54 @@ input , label{
     }
 }
 
+/* 價格表 RWD */
+@media screen and (max-width:767px){
+    .price{
+        margin: 80px auto;
+        gap: 40px;
+    }
+    .price-list{
+        li{
+            padding: 24px 32px;
+            height: 88px;
+            img{
+                width: 40px;
+            }
+            p{
+                font-size: 20px;
+                font-weight: 700;
+            }
+            hr{
+                width: 28px;
+                margin: 0 16px;
+            }
+            .charge{
+                font-size: 20px;
+            }
+        }
+    }
+}
 
+/* 客戶案例 */
+.sample{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 120px;
+    gap: 80px;
+    h2{
+        margin-top: 120px;
+    }
+}
+.card-group{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    .card{
+        width: 49%;
+    }
+}
 
 
 
