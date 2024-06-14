@@ -408,12 +408,14 @@ input , label{
 }
 .price-list{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
     li{
         display: flex;
         align-items: center;
         background-color: #FAFAFA;
-        min-width: 416px;
+        max-width: 416px;
         height: 120px;
         padding: 32px;
         border-radius: 8px;
@@ -428,16 +430,20 @@ input , label{
             width: 24px;
             color: #C1C1C1;
             height: 1px;
-            margin: 0 16px;
+            margin: 0 10px;
         }
-        span{
+        .charge{
             color: #1E1E1E;
             line-height: 1.5;
             font-size: 32px;
             font-weight: 700;
+            margin-left: 0px;
         }
-        .size-sm{
+        span{
             font-size: 16px;
+            color: #5B5B5B;
+            font-weight: 400;
+            margin-left: 8px;
         }
     }
 }
