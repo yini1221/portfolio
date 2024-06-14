@@ -403,7 +403,7 @@ input , label{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 120px 0;
+    margin: 120px auto;
     gap: 80px;
 }
 .price-list{
@@ -412,10 +412,33 @@ input , label{
     li{
         display: flex;
         align-items: center;
-        gap: 8px;
         background-color: #FAFAFA;
-        max-width: 416px;
+        min-width: 416px;
         height: 120px;
+        padding: 32px;
+        border-radius: 8px;
+        p{
+            color: #5B5B5B;
+            line-height: 1.5;
+            font-size: 28px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        hr{
+            width: 24px;
+            color: #C1C1C1;
+            height: 1px;
+            margin: 0 16px;
+        }
+        span{
+            color: #1E1E1E;
+            line-height: 1.5;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        .size-sm{
+            font-size: 16px;
+        }
     }
 }
 
