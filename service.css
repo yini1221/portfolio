@@ -564,6 +564,7 @@ input , label{
     justify-content: center;
     gap: 24px;
     li{
+        width: calc(50% - 12px);
         padding: 24px 0 16px;
         max-width: 526px;
         border: 1px solid #E9E9E9;
