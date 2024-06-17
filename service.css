@@ -477,18 +477,17 @@ input , label{
 }
 
 /* 客戶案例 */
+.bg-sample{
+    background-color: #FAFAFA;
+    padding: 120px 0;
+}
 .sample{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #FAFAFA;
-    margin-bottom: 120px;
     gap: 80px;
     position: relative;
     z-index: 0;
-    h2{
-        margin-top: 120px;
-    }
     .title-line{
         background-color: #FAFAFA;
     }
@@ -532,11 +531,11 @@ input , label{
 
 /* 客戶案例 RWD */
 @media screen and (max-width:767px){
+    .bg-sample{
+        padding: 80px 0;
+    }
     .sample{
         gap: 40px;
-        h2{
-            margin-top: 80px;
-        }
     }
     .card-group{
         flex-direction: column;
@@ -563,6 +562,7 @@ input , label{
     flex-wrap: wrap;
     justify-content: center;
     gap: 24px;
+    padding: 0 12px;
     li{
         width: calc(50% - 12px);
         padding: 24px 0 16px;
@@ -577,6 +577,25 @@ input , label{
         }
     }
 }
+
+/* 常見問題 RWD */
+@media screen and (max-width:767px){
+    .questions{
+        margin-bottom: 80px;
+    }
+    .question h2{
+        margin-top: 80px;
+    }
+    .questions-list{
+        flex-direction: column;
+        padding: 0 20px;
+        li{
+            width: 100%;
+        }
+    }
+}
+
+
 
 
 /* footer  */
