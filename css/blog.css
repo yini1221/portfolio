@@ -1,52 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
 /* 全域設定 */
 *, *::before, *::after{
     box-sizing: border-box;
@@ -167,7 +118,7 @@ input , label{
 
 /* RWD */
 @media screen and (max-width:767px){
-    .header .header-inner{
+    .header-inner{
         justify-content: space-between;
         padding: 8px 12px;
     }
@@ -204,65 +155,148 @@ input , label{
     }
 }
 
-/* content */ 
+/* banner */
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0 80px;
+    gap: 24px;
+    h2{
+        color: #3B3B3B;
+        font-size: 32px;
+        line-height: 1.2;
+        font-weight: 600;
+    }
+    p{
+        color: #919191;
+    }
+}
+/* banner 標題裝飾 */
+.banner h2{
+    display: flex;
+    position: relative;
+    &::before{ /* 背景線條 */
+        content: '';
+        position: absolute;
+        width: 336px;
+        height: 1px;
+        background-color: #C1C1C1;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;       
+        z-index: 0;
+    }
+}
+.title-line{
+    background: #ffffff;
+    z-index: 1;
+    padding: 0 16px;
+    &::before{ /* 左側圓點 */
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: #C1C1C1;
+        border-radius: 50%;
+        top: 50%;
+        left: -110px;
+        transform: translateY(-50%);
+    }
+    &::after{ /* 右側圓點 */
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: #C1C1C1;
+        border-radius: 50%;
+        top: 50%;
+        right: -110px;
+        transform: translateY(-50%);
+    }
+}
+ /* banner RWD */
+ @media screen and (max-width:767px){
+    .banner{
+        padding: 80px 0 60px;
+    }
+    
+ }
+ @media screen and (max-width:460px){
+    .banner{
+        gap: 16px;
+        padding: 40px 0;
+    }
+    .banner h2{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .banner h2::before{
+    width: 222px;
+    }
+    .title-line::before{
+        left: -60px;
+    }
+    .title-line::after{
+        right: -60px;
+    }
+ }
+ 
+/* content */
 .content-inner{
     display: flex;
-    margin: 120px auto 80px;
-    gap: 134px;
-    color: #3B3B3B;
+    margin-bottom: 120px;
+    gap: 24px;
+}
+.article-list{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    width: 74%;
+    article{
+        display: flex;
+        gap: 16px;
+        color: #3B3B3B;
+    }
+}
+.article-img{
+    max-width: 306px;
+    height: 220px;
+    width: 100%;
+    img{
+        border-radius: 8px;
+        height: 100%;
+    }
 }
 .article-content{
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    width: 74%;
-    p{
-        font-size: 20px;
-        text-align: start;
+    gap: 16px;
+    width: 68%;
+    fooder{
+        display: flex;
+        gap: 16px;
+        align-items: center;
     }
-}
-.content-tag{
-    display: flex;
-    color: #919191;
-    p{
-        font-size: 16px;
+    span{
+        color: #5B5B5B;
     }
-}
-.article-header{
-    text-align: center;
-    h2 , h3{
-        line-height: 1.2;
+    .tag{
+        color: #3B3B3B;
+        background: #F1F1F1;
+        padding: 4px 12px;
+        border-radius: 16px;
     }
-    h2{
-        font-size: 32px;
-        font-weight: 700;
-        margin-bottom: 24px;
-    }
-    h3{
-        font-size: 24px;
-        margin-bottom: 64px;
-    }
-}
-.article-content{
-    max-width: 856px;
-    h4{
-        line-height: 1.2;
-        font-weight: 700;
-        font-size: 24px;
-        margin-bottom: 16px;
-    }
-}
-.article-content .card{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    li{
-        width: calc(50% - 12px);
+    header{
+        h2{
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
         p{
-            color: #5B5B5B;
-            font-size: 16px;
-            text-align: center;
-            margin-top: 8px;
+            margin: 16px 0 36px;
+            color: #3B3B3B;
         }
     }
 }
@@ -304,14 +338,10 @@ input , label{
 
 /* content RWD */
 @media screen and (max-width:767px){
-    .container {
-        padding: 0;
-    }
     .content-inner{
         flex-direction: column-reverse;
-        gap: 32px;
-        margin: 0 auto 40px;
-        align-items: center;
+        gap: 40px;
+        margin-bottom: 80px;
     }
     .article-menu{
         width: 100%;
@@ -328,123 +358,40 @@ input , label{
         font-size: 16px;
        }
     }
-    .article-content{
-        padding: 0 12px;
+    .article-list{
         width: 100%;
-        gap: 32px;
-        h4{
-            font-size: 20px;
-        }
+        padding: 0 22.5px;
+        gap: 40px;
     }
-    .content-tag{
-        justify-content: space-between;
-        margin-bottom: -8px;
-        span{
-            display: none;
-        }
-    }
-    .article-header{
-        h2{
-        font-size: 24px;
-        margin-bottom: 16px;
-        }
-        h3{
-            font-size: 16px;
-            margin-bottom: 24px;
-        }
-    }
-    .article-content .card {
-        gap: 32px;
-        li{
-            width: 100%;
+    .article-list article{
+        flex-direction: column;
+        align-items: center;
+        .article-img{
+            display: flex;
+            justify-content: center;
+            height: auto;
+            max-width: 100%;
             img{
                 width: 100%;
+                border: 1px solid #F1F1F1;
+            }
+        }
+        .article-content{
+            width: 100%;
+            fooder{
+                justify-content: space-between;
+            }
+            header p{
+                margin: 12px 0 0 0;
+                height: 72px;
+                overflow-y: scroll;
+                &::-webkit-scrollbar{
+                    display: none;     
+                }
             }
         }
     }
 }
-
-/* article-more */
-.article-more{
-    border-top: 1px solid #C1C1C1;
-    padding: 80px 0 120px;
-    margin: 0 auto;
-    h3{
-        font-weight: 700;
-        line-height: 1.2;
-        font-size: 28px;
-        margin-bottom: 40px;
-    }
-    h4{
-        line-height: 1.2;
-        font-weight: 700;
-        font-size: 20px;
-        margin-bottom: 16px;
-    }
-}
-.article-card{
-    display: flex;
-    gap: 24px;
-    max-width: 856px;
-    li{
-        max-width: 416px;
-    }
-    img{
-        border: 1px solid #F1F1F1;
-        border-radius: 8px;
-        margin-bottom: 16px;
-    }
-}
-.card-content{
-    padding: 0 8px;
-    .tag{
-        display: flex;
-        justify-content: space-between;
-        p{
-            background: #F1F1F1;
-            border-radius: 16px;
-            padding: 4px 12px;
-        }
-        span{
-            color: #5B5B5B;
-        }
-    }
-}
-
-/* article-more RWD */
-@media screen and (max-width:767px){
-    .article-more{
-        margin: 0 12px;
-        padding: 40px 0 80px;
-        h3{
-            text-align: center;
-            font-size: 24px;
-        }
-        h4{
-            margin-bottom: 0;
-        }
-    }
-    .article-card{
-        flex-direction: column;
-        row-gap: 40px;
-        li{
-            max-width: 100%;
-        }
-        img{
-            width: 100%;
-        }
-    }
-    .card-content{
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 16px;
-        .tag{
-            flex-direction: row-reverse;
-            align-items: center;
-        }
-    }
-}
-
 /* footer  */
 .fooder{
     background-image: url(img/footer-bg-lg.png);
