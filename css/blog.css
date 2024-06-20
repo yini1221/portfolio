@@ -18,8 +18,7 @@ a{
     text-decoration: none;
 }
 .container{
-    max-width: 1296px;
-    height: 100%;
+    max-width: 1320px;
     margin: 0 auto;
     padding: 0 12px;
 }
